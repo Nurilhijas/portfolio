@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Nuril Hijas Portfolio</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-        <!-- Animate.css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-        <!-- Custom CSS -->
-        <style>
-            @media only screen and (max-width: 768px) {
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="Nuril_Hijas_S-cirlce.png" style="border-radius: 50%;" ; type="image/x-icon">
+    <title>
+        Nuril Hijas Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Custom CSS -->
+    <style>
+        @media only screen and (max-width: 768px) {
                 body {
                     padding-top: 56px; /* Adjust as needed for mobile view */
                     margin: 0;
@@ -189,6 +192,23 @@
                     transform: translateX(0);
                 }
             }
+
+            .contact-container {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea {
+            resize: vertical;
+        }
 
             footer {
                 position: relative;
@@ -752,271 +772,307 @@
 	position: absolute;
 	width: 180px;
 }
-        </style>
-    </head>
-    <body>
-       
-            
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#">Nuril Hijas Safiullah</a>
+    </style>
+</head>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#work">Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#project">Project</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+<body>
 
-        <section id="home" class="home">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-15 mx-auto">
-                        <br />
-                        <br />
-                        <div class="home-container">
-                            <div class="photo-container">
-                                <img src="Nuril_Hijas_S.jpeg" alt="Nuril Hijas" class="img_src" />
-                            </div>
 
-                            <div class="description-container">
-                                <h1 style="color: #3498db;"><b>Welcome to my portfolio!</b></h1>
-                                <h2>I'm <b style="color: #a71313;">Nuril Hijas Safiullah</b>, Software Engineer at VIT Infotech | Freelance Full Stack Developer.</h2>
-                                <!-- Add more details about your skills, experience, etc. -->
-                                <div class="col-lg-19 mx-auto">
-                                    <button id="openPdfButton" type="button" class="btn btn-primary btn-rounded download-btn" data-mdb-ripple-init>
-                                        Download CV
-                                    </button>
-                                    <script>
-                                        document.getElementById("openPdfButton").addEventListener("click", function () {
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Nuril Hijas Safiullah</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#work">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#project">Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-15 mx-auto">
+                    <br />
+                    <br />
+                    <div class="home-container">
+                        <div class="photo-container">
+                            <img src="Nuril_Hijas_S.jpeg" alt="Nuril Hijas" class="img_src" />
+                        </div>
+
+                        <div class="description-container">
+                            <h1 style="color: #3498db;"><b>Welcome to my portfolio!</b></h1>
+                            <h2>I'm <b style="color: #a71313;">Nuril Hijas Safiullah</b>, Software Engineer at VIT Infotech | Freelance Full Stack Developer.</h2>
+                            <!-- Add more details about your skills, experience, etc. -->
+                            <div class="col-lg-19 mx-auto">
+                                <button id="openPdfButton" type="button" class="btn btn-primary btn-rounded download-btn" data-mdb-ripple-init>
+                                    Download CV
+                                </button>
+                                <script>
+                                    document.getElementById("openPdfButton").addEventListener("click", function () {
                                             // Replace "path_to_your_pdf_file.pdf" with the actual path or URL of your PDF file
                                             var pdfPath = "Nuril_Hijas_S_Developer_Resume.pdf";
 
                                             // Open the PDF in a new window
                                             window.open(pdfPath, "_blank");
                                         });
-                                    </script>
-                                </div>
-                                <div class="contact-icons">
-                                    <!-- LinkedIn -->
-                                    <a href="https://www.linkedin.com/in/nurilhijass/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </script>
+                            </div>
+                            <div class="contact-icons">
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/nurilhijass/" target="_blank"><i class="fab fa-linkedin"></i></a>
 
-                                    <!-- GitHub -->
-                                    <a href="https://github.com/Nurilhijas" target="_blank"><i class="fab fa-github"></i></a>
+                                <!-- GitHub -->
+                                <a href="https://github.com/Nurilhijas" target="_blank"><i class="fab fa-github"></i></a>
 
-                                    <!-- Instagram -->
-                                    <a href="https://www.instagram.com/nurilhijas/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/nurilhijas/" target="_blank"><i class="fab fa-instagram"></i></a>
 
-                                    <!-- Facebook -->
-                                    <a href="https://www.facebook.com/nuril.hijas" target="_blank"><i class="fab fa-facebook"></i></a>
-                                </div>
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/nuril.hijas" target="_blank"><i class="fab fa-facebook"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Animate.css library -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
-        <!-- About Section -->
-        <section id="about" class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="text-center">
+    <!-- Animate.css library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="text-center">
                             <b><u>Overview</u></b>
                         </h2>
-                        <p>
-                            I'm an IT professional with a Bachelor's degree, driven by a passion for crafting innovative software solutions. With expertise in Java, Spring Boot, gRPC, and Angular, I've excelled in creating efficient,
-                            user-centric applications. I thrive on solving complex challenges and have a track record of contributing to the success of various projects throughout my tech career.
-                        </p>
-                        <br />
-                        <h2 class="text-center">
+                    <p>
+                        I'm an IT professional with a Bachelor's degree, driven by a passion for crafting innovative software solutions. With expertise in Java, Spring Boot, gRPC, and Angular, I've excelled in creating efficient, user-centric applications. I thrive on solving
+                        complex challenges and have a track record of contributing to the success of various projects throughout my tech career.
+                    </p>
+                    <br />
+                    <h2 class="text-center">
                             <b><u>Skills</u></b>
                         </h2>
-                        <div class="container mt-5">
-                            <div class="row" id="skillsList">
-                                <!-- Skill boxes will be dynamically added here using JavaScript -->
-                            </div>
+                    <div class="container mt-5">
+                        <div class="row" id="skillsList">
+                            <!-- Skill boxes will be dynamically added here using JavaScript -->
                         </div>
                     </div>
-                    <!-- Add more columns for additional content -->
                 </div>
+                <!-- Add more columns for additional content -->
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="work" class="py-5" style="background-color: #ffffff;">
-            <h2 class="text-center">
+    <section id="work" class="py-5" style="background-color: #ffffff;">
+        <h2 class="text-center">
                 <b><u>Work Experience</u></b>
             </h2>
-            <ul class="timeline">
-                <p style="text-align: center;"><b>Present</b></p>
-                <!-- Item 1-->
-                <li>
-                    <div class="direction-l">
-                        <div class="flag-wrapper">
-                            <span class="hexa"></span>
-                            <span class="flag">Software Engineer</span>
-                            <span class="time-wrapper"><span class="time">October 2021 to Present</span></span>
-                            <span class="time-wrapper">
+        <ul class="timeline">
+            <p style="text-align: center;"><b>Present</b></p>
+            <!-- Item 1-->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Software Engineer</span>
+                        <span class="time-wrapper"><span class="time">October 2021 to Present</span></span>
+                        <span class="time-wrapper">
                                 <br />
                                 <span class="flag" style="color: #333;">VIT Infotech</span>
-                            </span>
-                        </div>
-                        <div class="desc">
-                            <ul>
-                                <li>Developed and improved web pages using Angular, HTML, CSS, and Typescript to create dynamic and interactive user interfaces.</li>
-                                <li>Played a vital role in the implementation of workflow automation using the Activiti BPMN framework.</li>
-                                <li>Implemented and configured Kafka Producers and Consumers for this application, enabling efficient real-time data streaming and processing.</li>
-                                <li>Implemented and maintained Jenkins pipelines to automate the build, test, and deployment processes for the web application.</li>
-                                <li>Involved in Docker containerization to enhance application deployment and management.</li>
-                                <li>Implemented a new plugin to address a critical vulnerability issue, ensuring the security of this application.</li>
-                            </ul>
-                        </div>
+                        </span>
                     </div>
-                </li>
+                    <div class="desc">
+                        <ul>
+                            <li>Developed and improved web pages using Angular, HTML, CSS, and Typescript to create dynamic and interactive user interfaces.</li>
+                            <li>Played a vital role in the implementation of workflow automation using the Activiti BPMN framework.</li>
+                            <li>Implemented and configured Kafka Producers and Consumers for this application, enabling efficient real-time data streaming and processing.</li>
+                            <li>Implemented and maintained Jenkins pipelines to automate the build, test, and deployment processes for the web application.</li>
+                            <li>Involved in Docker containerization to enhance application deployment and management.</li>
+                            <li>Implemented a new plugin to address a critical vulnerability issue, ensuring the security of this application.</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
 
-                <!-- Item 3 -->
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="hexa"></span>
-                            <span class="flag">Software Enfineer Trainee</span>
-                            <span class="time-wrapper"><span class="time">October 2020 to October 2021</span></span>
-                            <span class="time-wrapper">
+            <!-- Item 3 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="hexa"></span>
+                        <span class="flag">Software Enfineer Trainee</span>
+                        <span class="time-wrapper"><span class="time">October 2020 to October 2021</span></span>
+                        <span class="time-wrapper">
                                 <br />
                                 <span class="flag" style="color: #333;">VIT Infotech</span>
-                            </span>
-                        </div>
-                        <div class="desc">
-                            <ul>
-                                <li>Designed and developed Restful APIs for different modules in the project as per the requirement.</li>
-                                <li>Integrated email operations and PDF report generation using RESTful APIs for this application, enhancing communication and reporting capabilities.</li>
-                                <li>Implemented the Liquibase framework for efficient database version control and schema migration.</li>
-                                <li>Implemented batch processing logic to handle large volumes of records, ensuring data integrity and minimizing processing time.</li>
-                            </ul>
-                        </div>
+                        </span>
                     </div>
-                </li>
-                <p style="text-align: center;"><b>19-October-2020</b></p>
-            </ul>
-        </section>
-        <section id="project" class="py-5">
-            <h2 class="text-center">
+                    <div class="desc">
+                        <ul>
+                            <li>Designed and developed Restful APIs for different modules in the project as per the requirement.</li>
+                            <li>Integrated email operations and PDF report generation using RESTful APIs for this application, enhancing communication and reporting capabilities.</li>
+                            <li>Implemented the Liquibase framework for efficient database version control and schema migration.</li>
+                            <li>Implemented batch processing logic to handle large volumes of records, ensuring data integrity and minimizing processing time.</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <p style="text-align: center;"><b>19-October-2020</b></p>
+        </ul>
+    </section>
+    <section id="project" class="py-5">
+        <h2 class="text-center">
                 <b><u>Projects</u></b>
             </h2>
-            <div class="project-container row">
-                <!-- Project 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card">
-                        <img src="student-management-logo.png" class="card-img-top project-thumbnail" alt="Project 1 Thumbnail" />
-                        <div class="card-body">
-                            <h5 class="card-title"><b>Student Management</b></h5>
-                            <p class="card-text" style="text-align: justify;">
-                                I spearheaded the development of a dynamic and efficient student management system designed to streamline and enhance the administrative processes within educational institutions. The project aims to
-                                revolutionize the way schools manage student data, fees, transfer, billings and reports
-                            </p>
-                            <br />
-                            <br />
-                            <a href="#" class="btn btn-primary">View Project <i class="fa fa-lock"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card">
-                        <img src="shutdown-logo.png" class="card-img-top project-thumbnail" alt="Project 2 Thumbnail" />
-                        <div class="card-body">
-                            <h5 class="card-title"><b>Project Shutdown</b></h5>
-                            <p class="card-text" style="text-align: justify;">
-                                Project Shutdown is a robust Android application developed to facilitate the remote shutdown of devices within a network using IP addresses. Leveraging socket programming, this project offers a seamless and
-                                secure solution for users to control device power remotely, providing practical utility in scenarios where manual shutdown is inconvenient or inaccessible.
-                            </p>
-                            <br />
-                            <a href="https://github.com/Nurilhijas/Project-Shutdown" target="_blank" class="btn btn-primary">View Project <i class="fa fa-unlock"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card">
-                        <img src="Dashboard-logo.jpg" class="card-img-top project-thumbnail img-fluid" alt="Project 3 Thumbnail" />
-                        <div class="card-body">
-                            <h5 class="card-title"><b>Collaborative Problem-Solving Dashboard</b></h5>
-                            <p class="card-text" style="text-align: justify;">
-                                Our project centers around the creation of an interactive dashboard for students, staff, and industry professionals within a college setting. This platform serves as a solution hub, allowing users to engage
-                                in discussions across various fields, seeking and providing solutions to challenges they encounter. The dashboard acts as a bridge, fostering collaboration and knowledge exchange.
-                            </p>
-
-                            <a href="#" class="btn btn-primary">View Project <i class="fa fa-lock"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card">
-                        <img src="tax-logo.png" class="card-img-top project-thumbnail img-fluid" alt="Project 4 Thumbnail" />
-                        <div class="card-body">
-                            <h5 class="card-title"><b>G.S.T Tax Calculator</b></h5>
-                            <p class="card-text" style="text-align: justify;">
-                                The GST Tax Calculator Android application simplifies and expedites the process of calculating Goods and Services Tax (GST) for users. With a user-friendly interface and efficient functionalities, this app
-                                provides a quick solution for individuals and businesses to determine GST amounts accurately.
-                            </p>
-                            <a href="https://github.com/Nurilhijas/G.S.T-Tax-Calculator" target="_blank" class="btn btn-primary">View Project <i class="fa fa-unlock"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card project-card">
-                        <img src="Fututre-logo.jpg" class="card-img-top project-thumbnail img-fluid" alt="Project 5 Thumbnail" />
-                        <div class="card-body">
-                            <h5 class="card-title"><b>New Project.....</b></h5>
-                            <p class="card-text">In future....</p>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <a href="#" class="btn btn-primary">View Project <i class="fa fa-unlock"></i></a>
-                        </div>
+        <div class="project-container row">
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card project-card">
+                    <img src="student-management-logo.png" class="card-img-top project-thumbnail" alt="Project 1 Thumbnail" />
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Student Management</b></h5>
+                        <p class="card-text" style="text-align: justify;">
+                            I spearheaded the development of a dynamic and efficient student management system designed to streamline and enhance the administrative processes within educational institutions. The project aims to revolutionize the way schools manage student data,
+                            fees, transfer, billings and reports
+                        </p>
+                        <br />
+                        <br />
+                        <a href="#" class="btn btn-primary">View Project <i class="fa fa-lock"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Bootstrap JS and dependencies -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <!-- Animate.css library -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+            <!-- Project 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card project-card">
+                    <img src="shutdown-logo.png" class="card-img-top project-thumbnail" alt="Project 2 Thumbnail" />
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Project Shutdown</b></h5>
+                        <p class="card-text" style="text-align: justify;">
+                            Project Shutdown is a robust Android application developed to facilitate the remote shutdown of devices within a network using IP addresses. Leveraging socket programming, this project offers a seamless and secure solution for users to control device
+                            power remotely, providing practical utility in scenarios where manual shutdown is inconvenient or inaccessible.
+                        </p>
+                        <br />
+                        <a href="https://github.com/Nurilhijas/Project-Shutdown" target="_blank" class="btn btn-primary">View Project <i class="fa fa-unlock"></i></a>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Custom JavaScript to dynamically create skill boxes with animation -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
+            <!-- Project 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card project-card">
+                    <img src="Dashboard-logo.jpg" class="card-img-top project-thumbnail img-fluid" alt="Project 3 Thumbnail" />
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Collaborative Problem-Solving Dashboard</b></h5>
+                        <p class="card-text" style="text-align: justify;">
+                            Our project centers around the creation of an interactive dashboard for students, staff, and industry professionals within a college setting. This platform serves as a solution hub, allowing users to engage in discussions across various fields, seeking
+                            and providing solutions to challenges they encounter. The dashboard acts as a bridge, fostering collaboration and knowledge exchange.
+                        </p>
+
+                        <a href="#" class="btn btn-primary">View Project <i class="fa fa-lock"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card project-card">
+                    <img src="tax-logo.png" class="card-img-top project-thumbnail img-fluid" alt="Project 4 Thumbnail" />
+                    <div class="card-body">
+                        <h5 class="card-title"><b>G.S.T Tax Calculator</b></h5>
+                        <p class="card-text" style="text-align: justify;">
+                            The GST Tax Calculator Android application simplifies and expedites the process of calculating Goods and Services Tax (GST) for users. With a user-friendly interface and efficient functionalities, this app provides a quick solution for individuals and
+                            businesses to determine GST amounts accurately.
+                        </p>
+                        <a href="https://github.com/Nurilhijas/G.S.T-Tax-Calculator" target="_blank" class="btn btn-primary">View Project <i class="fa fa-unlock"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card project-card">
+                    <img src="Fututre-logo.jpg" class="card-img-top project-thumbnail img-fluid" alt="Project 5 Thumbnail" />
+                    <div class="card-body">
+                        <h5 class="card-title"><b>New Project.....</b></h5>
+                        <p class="card-text">In future....</p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="#" class="btn btn-primary">View Project <i class="fa fa-unlock"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="contact-container">
+                <h2 class="text-center">
+                        <b><u>Contact Me</u></b>
+                    </h2>
+                <p class="text-center">Feel free to reach out to me using the form below.</p>
+
+                <!-- Contact Form -->
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b7f311f6-d56b-4468-98c9-2d3ff6edc53e">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Animate.css library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+
+    <!-- Custom JavaScript to dynamically create skill boxes with animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
                 var container = document.getElementById("skillsList");
 
                 // Updated data for each skill (name, logo URL)
@@ -1068,11 +1124,11 @@
                     }, index * 100); // Delay each box by 200 milliseconds
                 });
             });
-        </script>
-        <footer>
-            <b> &copy; 2024 Nuril Hijas Safiullah. All Rights Reserved.</b>
-        </footer>
-        <div id="background-wrap">
+    </script>
+    <footer>
+        <b> &copy; 2024 Nuril Hijas Safiullah. All Rights Reserved.</b>
+    </footer>
+    <div id="background-wrap">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>
         <div class="bubble x3"></div>
@@ -1084,5 +1140,6 @@
         <div class="bubble x9"></div>
         <div class="bubble x10"></div>
     </div>
-    </body>
+</body>
+
 </html>
