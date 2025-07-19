@@ -1,1145 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" href="Nuril_Hijas_S-cirlce.png" style="border-radius: 50%;" ; type="image/x-icon">
-    <title>
-        Nuril Hijas Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-    <!-- Custom CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuril Hijas  Portfolio</title>
+    <link rel="icon" href="back_img_circle.png" style="border-radius: 20%;" ; type="image/x-icon">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        @media only screen and (max-width: 768px) {
-                body {
-                    padding-top: 56px; /* Adjust as needed for mobile view */
-                    margin: 0;
-                    overflow-x: hidden;
-                }
-                .download-btn {
-                    position: relative;
-                    top: 50%;
-                    bottom: 50%; /* Adjust as needed */
-                    right: 75%;
-                    left: 25%;
-                    transform: translateX(-50%);
-                }
-            }
-            body {
-                padding-top: 56px;
-                margin: 0;
-                overflow-x: hidden; /* Add this line to hide horizontal scrollbar */
-            }
-            .home {
-                position: relative;
-                height: 60vh; /* Set the height to 100% of the viewport height */
-                text-align: center;
-                color: #fff; /* Set text color to contrast with the background */
-            }
-            .home h2 {
-                margin-bottom: 20px;
-            }
-            .download-btn {
-                position: relative;
-                top: 50%;
-                bottom: 50%; /* Adjust as needed */
-                right: 90%;
-                left: 10%;
-                transform: translateX(-50%);
-            }
-            .skill-box {
-                position: relative;
-                width: 150px;
-                height: 150px;
-                background-color: #fff; /* White background */
-                border: 2px solid #3498db; /* Modernized border color */
-                border-radius: 10px; /* Slightly increased border radius for a softer look */
-                text-align: center;
-                cursor: pointer;
-                overflow: hidden; /* Hide overflow content */
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a modernized look */
-                animation-duration: 0.5s; /* Set animation duration */
-            }
-            .stars {
-                color: #f39c12; /* Star color */
-                position: absolute;
-                top: 22px;
-                bottom: 10px;
-                left: 0;
-                right: 0;
-            }
-
-            .box-logo {
-                max-width: 60%;
-                max-height: 50%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-            .box-name {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: rgba(142, 190, 186, 0.8); /* Semi-transparent white background for better text visibility */
-                padding: 5px;
-                margin: 0;
-            }
-
-            /* Hover effect */
-            .skill-box:hover {
-                transform: scale(1.05); /* Scale the box on hover */
-                border-color: #e74c3c; /* Change border color on hover */
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
-            }
-
-            /* Add margin-bottom for space between boxes */
-            .row [class*="col-"] {
-                margin-bottom: 10px;
-            }
-            .home-container {
-                max-width: 1200px;
-                margin: 0 auto;
-                overflow: hidden;
-                padding: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .photo-container {
-                flex: 1;
-                text-align: center;
-                box-sizing: border-box;
-                animation: fadeInCenter 2s;
-            }
-
-            .description-container {
-                flex: 1;
-                padding: 20px;
-                box-sizing: border-box;
-                animation: fadeInLeft 2s;
-            }
-
-            .img_src {
-                width: 300px; /* Set your desired width */
-                height: auto;
-                border-radius: 50%;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-                margin: 0 auto; /* Center the image horizontally */
-            }
-
-            h1 {
-                color: #333;
-                font-size: 2em;
-                margin-bottom: 10px;
-            }
-
-            h2 {
-                color: #555;
-                font-size: 1.5em;
-                margin-bottom: 20px;
-            }
-
-            p {
-                color: #777;
-                font-size: 1em;
-            }
-
-            .contact-icons {
-                margin-top: 20px;
-            }
-
-            .contact-icons a {
-                text-decoration: none;
-                color: #555;
-                margin-right: 15px;
-                font-size: 1.5em;
-                transition: color 0.3s;
-            }
-
-            .contact-icons a:hover {
-                color: blue;
-            }
-
-            @keyframes fadeInCenter {
-                from {
-                    opacity: 0;
-                    transform: translateY(-50px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            @keyframes fadeInLeft {
-                from {
-                    opacity: 0;
-                    transform: translateX(-50px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-
-            .contact-container {
-            max-width: 400px;
-            margin: auto;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Dark text color */
+            overflow-x: hidden; /* Prevent horizontal scroll due to potential content overflow */
         }
-
-        form {
-            margin-top: 20px;
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-
-        label {
-            font-weight: bold;
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
         }
-
-        textarea {
-            resize: vertical;
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
         }
-
-            footer {
-                position: relative;
-                bottom: 0;
-                width: 100%;
-                text-align: center;
-                padding: 10px 0;
-                background-color: #204d79;
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
             }
-            .hexa {
-                border: 0px;
-                float: left;
-                text-align: center;
-                height: 35px;
-                width: 60px;
-                font-size: 22px;
-                background: #f0f0f0;
-                color: #3c3c3c;
-                position: relative;
-                margin-top: 15px;
-            }
-
-            .hexa:before {
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 0;
-                height: 0;
-                border-bottom: 15px solid #f0f0f0;
-                border-left: 30px solid transparent;
-                border-right: 30px solid transparent;
-                top: -15px;
-            }
-
-            .hexa:after {
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 0;
-                height: 0;
-                border-left: 30px solid transparent;
-                border-right: 30px solid transparent;
-                border-top: 15px solid #f0f0f0;
-                bottom: -15px;
-            }
-
-            .timeline {
-                position: relative;
-                padding: 0;
-                width: 100%;
-                margin-top: 20px;
-                list-style-type: none;
-            }
-
-            .timeline:before {
-                position: absolute;
-                left: 50%;
-                top: 0;
-                content: " ";
-                display: block;
-                width: 2px;
-                height: 100%;
-                margin-left: -1px;
-                background: rgb(213, 213, 213);
-                background: -moz-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
-                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
-                background: -webkit-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
-                background: -o-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
-                background: -ms-linear-gradient(top, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
-                background: linear-gradient(to bottom, rgba(213, 213, 213, 0) 0%, rgb(213, 213, 213) 8%, rgb(213, 213, 213) 92%, rgba(213, 213, 213, 0) 100%);
-                z-index: 5;
-            }
-
-            .timeline li {
-                padding: 2em 0;
-            }
-
-            .timeline .hexa {
-                width: 16px;
-                height: 10px;
-                position: absolute;
-                background: #00c4f3;
-                z-index: 5;
-                left: 0;
-                right: 0;
-                margin-left: auto;
-                margin-right: auto;
-                top: -30px;
-                margin-top: 0;
-            }
-
-            .timeline .hexa:before {
-                border-bottom: 4px solid #00c4f3;
-                border-left-width: 8px;
-                border-right-width: 8px;
-                top: -4px;
-            }
-
-            .timeline .hexa:after {
-                border-left-width: 8px;
-                border-right-width: 8px;
-                border-top: 4px solid #00c4f3;
-                bottom: -4px;
-            }
-
-            .direction-l,
-            .direction-r {
-                float: none;
-                width: 100%;
-                text-align: center;
-            }
-
-            .flag-wrapper {
-                text-align: center;
-                position: relative;
-            }
-
-            .flag {
-                position: relative;
-                display: inline;
-                background: rgb(255, 255, 255);
-                font-weight: 600;
-                z-index: 15;
-                padding: 6px 10px;
-                text-align: left;
-                border-radius: 5px;
-            }
-
-            .direction-l .flag:after,
-            .direction-r .flag:after {
-                content: "";
-                position: absolute;
-                left: 50%;
-                top: -15px;
-                height: 0;
-                width: 0;
-                margin-left: -8px;
-                border: solid transparent;
-                border-bottom-color: rgb(255, 255, 255);
-                border-width: 8px;
-                pointer-events: none;
-            }
-
-            .direction-l .flag {
-                -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-                -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-                box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-            }
-
-            .direction-r .flag {
-                -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-                -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
-            }
-
-            .time-wrapper {
-                display: block;
-                position: relative;
-                margin: 4px 0 0 0;
-                z-index: 14;
-                line-height: 1em;
-                vertical-align: middle;
-                color: #fff;
-            }
-
-            .direction-l .time-wrapper {
-                float: none;
-            }
-
-            .direction-r .time-wrapper {
-                float: none;
-            }
-
-            .time {
-                background: #00c4f3;
-                display: inline-block;
-                padding: 8px;
-            }
-
-            .desc {
-                text-align: justify;
-                position: relative;
-                margin: 0.5em 0 0 0;
-                padding: 1em;
-                background: rgb(254, 254, 254);
-                -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-                -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-                box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-                z-index: 15;
-            }
-
-            .direction-l .desc,
-            .direction-r .desc {
-                position: relative;
-                margin: 1em 1em 0 1em;
-                padding: 1em;
-                z-index: 15;
-            }
-
-            @media (min-width: 768px) {
-                .timeline {
-                    width: 660px;
-                    margin: 0 auto;
-                    margin-top: 20px;
-                }
-
-                .timeline li:after {
-                    content: "";
-                    display: block;
-                    height: 0;
-                    clear: both;
-                    visibility: hidden;
-                }
-
-                .timeline .hexa {
-                    left: -28px;
-                    right: auto;
-                    top: 8px;
-                }
-
-                .timeline .direction-l .hexa {
-                    left: auto;
-                    right: -28px;
-                }
-
-                .direction-l {
-                    position: relative;
-                    width: 310px;
-                    float: left;
-                    text-align: right;
-                }
-
-                .direction-r {
-                    position: relative;
-                    width: 310px;
-                    float: right;
-                    text-align: left;
-                }
-
-                .flag-wrapper {
-                    display: inline-block;
-                }
-
-                .flag {
-                    font-size: 18px;
-                }
-
-                .direction-l .flag:after {
-                    left: auto;
-                    right: -16px;
-                    top: 50%;
-                    margin-top: -8px;
-                    border: solid transparent;
-                    border-left-color: rgb(254, 254, 254);
-                    border-width: 8px;
-                }
-
-                .direction-r .flag:after {
-                    top: 50%;
-                    margin-top: -8px;
-                    border: solid transparent;
-                    border-right-color: rgb(254, 254, 254);
-                    border-width: 8px;
-                    left: -8px;
-                }
-
-                .time-wrapper {
-                    display: inline;
-                    vertical-align: middle;
-                    margin: 0;
-                }
-
-                .direction-l .time-wrapper {
-                    float: left;
-                }
-
-                .direction-r .time-wrapper {
-                    float: right;
-                }
-
-                .time {
-                    padding: 5px 10px;
-                }
-
-                .direction-r .desc {
-                    margin: 1em 0 0 0.75em;
-                }
-            }
-
-            @media (min-width: 992px) {
-                .timeline {
-                    width: 800px;
-                    margin: 0 auto;
-                    margin-top: 20px;
-                }
-
-                .direction-l {
-                    position: relative;
-                    width: 380px;
-                    float: left;
-                    text-align: right;
-                }
-
-                .direction-r {
-                    position: relative;
-                    width: 380px;
-                    float: right;
-                    text-align: left;
-                }
-            }
-            .project-container {
-                margin-top: 50px;
-            }
-
-            .project-card {
-                margin-bottom: 30px;
-                transition: transform 0.3s ease-in-out; /* CSS animation */
-            }
-
-            .project-card:hover {
-                transform: scale(1.05); /* Increase size on hover */
-            }
-
-            .project-thumbnail {
-                max-height: 200px;
-                object-fit: cover;
-            }
-            #background-wrap {
-    bottom: 0;
-	left: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: -1;
-}
-
-/* KEYFRAMES */
-
-@-webkit-keyframes animateBubble {
-    0% {
-        margin-top: 1000px;
-    }
-    100% {
-        margin-top: -100%;
-    }
-}
-
-@-moz-keyframes animateBubble {
-    0% {
-        margin-top: 1000px;
-    }
-    100% {
-        margin-top: -100%;
-    }
-}
-
-@keyframes animateBubble {
-    0% {
-        margin-top: 1000px;
-    }
-    100% {
-        margin-top: -100%;
-    }
-}
-
-@-webkit-keyframes sideWays { 
-    0% { 
-        margin-left:0px;
-    }
-    100% { 
-        margin-left:50px;
-    }
-}
-
-@-moz-keyframes sideWays { 
-    0% { 
-        margin-left:0px;
-    }
-    100% { 
-        margin-left:50px;
-    }
-}
-
-@keyframes sideWays { 
-    0% { 
-        margin-left:0px;
-    }
-    100% { 
-        margin-left:50px;
-    }
-}
-
-/* ANIMATIONS */
-
-.x1 {
-    -webkit-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	
-	left: -5%;
-	top: 5%;
-	
-	-webkit-transform: scale(0.6);
-	-moz-transform: scale(0.6);
-	transform: scale(0.6);
-}
-
-.x2 {
-    -webkit-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	
-	left: 5%;
-	top: 80%;
-	
-	-webkit-transform: scale(0.4);
-	-moz-transform: scale(0.4);
-	transform: scale(0.4);
-}
-
-.x3 {
-    -webkit-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	
-	left: 10%;
-	top: 40%;
-	
-	-webkit-transform: scale(0.7);
-	-moz-transform: scale(0.7);
-	transform: scale(0.7);
-}
-
-.x4 {
-    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-	animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-	
-	left: 20%;
-	top: 0;
-	
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	transform: scale(0.3);
-}
-
-.x5 {
-    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	
-	left: 30%;
-	top: 50%;
-	
-	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	transform: scale(0.5);
-}
-
-.x6 {
-    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	
-	left: 50%;
-	top: 0;
-	
-	-webkit-transform: scale(0.8);
-	-moz-transform: scale(0.8);
-	transform: scale(0.8);
-}
-
-.x7 {
-    -webkit-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	
-	left: 65%;
-	top: 70%;
-	
-	-webkit-transform: scale(0.4);
-	-moz-transform: scale(0.4);
-	transform: scale(0.4);
-}
-
-.x8 {
-    -webkit-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-	animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
-	
-	left: 80%;
-	top: 10%;
-	
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	transform: scale(0.3);
-}
-
-.x9 {
-    -webkit-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
-	
-	left: 90%;
-	top: 50%;
-	
-	-webkit-transform: scale(0.6);
-	-moz-transform: scale(0.6);
-	transform: scale(0.6);
-}
-
-.x10 {
-    -webkit-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	-moz-animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
-	
-	left: 80%;
-	top: 80%;
-	
-	-webkit-transform: scale(0.3);
-	-moz-transform: scale(0.3);
-	transform: scale(0.3);
-}
-
-/* OBJECTS */
-
-.bubble {
-    -webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	
-    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-	
-    height: 200px;
-	position: absolute;
-	width: 200px;
-}
-
-.bubble:after {
-    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.5)), color-stop(70%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* IE10+ */
-    background: radial-gradient(ellipse at center,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	border-radius: 50%;
-	
-    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-	-moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-	box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-	
-	content: "";
-    height: 180px;
-	left: 10px;
-	position: absolute;
-	width: 180px;
-}
     </style>
 </head>
+<body class="antialiased">
 
-<body>
-
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Nuril Hijas Safiullah</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#work">Work</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#project">Project</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg p-4 fixed w-full z-10 top-0 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
+            <a href="#hero" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition duration-300 rounded-md p-2">Nuril Hijas Safiullah.</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium rounded-md p-2">About</a>
+                <a href="#experience" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium rounded-md p-2">Experience</a>
+                <a href="#skills" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium rounded-md p-2">Skills</a>
+                <a href="#tech-stack" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium rounded-md p-2">Tech Stack</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium rounded-md p-2">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium rounded-md p-2">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 rounded-lg shadow-md">
+            <a href="#about" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded-md">About</a>
+            <a href="#experience" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded-md">Experience</a>
+            <a href="#skills" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded-md">Skills</a>
+            <a href="#tech-stack" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded-md">Tech Stack</a>
+            <a href="#projects" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded-md">Projects</a>
+            <a href="#contact" class="block py-2 px-4 text-gray-800 hover:bg-gray-100 rounded-md">Contact</a>
         </div>
     </nav>
 
-    <section id="home" class="home">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-15 mx-auto">
-                    <br />
-                    <br />
-                    <div class="home-container">
-                        <div class="photo-container">
-                            <img src="Nuril_Hijas_S.jpeg" alt="Nuril Hijas" class="img_src" />
-                        </div>
-
-                        <div class="description-container">
-                            <h1 style="color: #3498db;"><b>Welcome to my portfolio!</b></h1>
-                            <h2>I'm <b style="color: #a71313;">Nuril Hijas Safiullah</b>, Software Engineer at Vivriti Capitals | Freelance Full Stack Developer.</h2>
-                            <!-- Add more details about your skills, experience, etc. -->
-                            <div class="col-lg-19 mx-auto">
-                                <button id="openPdfButton" type="button" class="btn btn-primary btn-rounded download-btn" data-mdb-ripple-init>
-                                    Download CV
-                                </button>
-                                <script>
-                                    document.getElementById("openPdfButton").addEventListener("click", function () {
-                                            // Replace "path_to_your_pdf_file.pdf" with the actual path or URL of your PDF file
-                                            var pdfPath = "Nuril_Hijas_S_Developer_Resume.pdf";
-
-                                            // Open the PDF in a new window
-                                            window.open(pdfPath, "_blank");
-                                        });
-                                </script>
-                            </div>
-                            <div class="contact-icons">
-                                <!-- LinkedIn -->
-                                <a href="https://www.linkedin.com/in/nurilhijass/" target="_blank"><i class="fab fa-linkedin"></i></a>
-
-                                <!-- GitHub -->
-                                <a href="https://github.com/Nurilhijas" target="_blank"><i class="fab fa-github"></i></a>
-
-                                <!-- Instagram -->
-                                <a href="https://www.instagram.com/nurilhijas/" target="_blank"><i class="fab fa-instagram"></i></a>
-
-                                <!-- Facebook -->
-                                <a href="https://www.facebook.com/nuril.hijas" target="_blank"><i class="fab fa-facebook"></i></a>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-gradient-to-r from-blue-500 to-indigo-600 text-white flex items-center justify-center min-h-screen pt-16 sm:pt-20 lg:pt-24 overflow-hidden rounded-b-3xl shadow-xl">
+        <!-- Overlay for text readability (adjust opacity as needed) -->
+        <div class="absolute inset-0 bg-black opacity-30 z-0"></div>
+        <div class="container mx-auto p-8 relative z-10 flex flex-col md:flex-row items-center md:justify-between">
+            <!-- Text content (left) -->
+            <div class="text-center md:text-left md:w-1/2 mb-8 md:mb-0">                
+                <h1 class="text-4xl sm:text-5xl lg:text-5xl font-extrabold mb-4 leading-tight">Hi, I'm <span class="text-yellow-300">Nuril Hijas Safiullah</span></h1>
+                <p class="text-lg sm:text-xl lg:text-2xl font-light mb-8 max-w-2xl md:max-w-none mx-auto md:mx-0">
+                  A Passionate Senior Software Developer who thrives on turning ideas into innovative, impactful software solutions that solve real-world problems.
+                </p>
+                <a href="Nuril_Hijas_Resume_Senior_Software_Developer.pdf" class="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition duration-300 ease-in-out" target="_blank">
+                    Download CV
+                </a>
+                                <div class="flex justify-center md:justify-start space-x-6 mt-8">
+                    <a href="https://www.facebook.com/nuril.hijas" target="_blank" aria-label="Facebook" class="text-white hover:text-gray-300 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.262c-1.247 0-1.646.773-1.646 1.572V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nurilhijass/" target="_blank" aria-label="LinkedIn" class="text-white hover:text-gray-300 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Nurilhijas" target="_blank" aria-label="GitHub" class="text-white hover:text-gray-300 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.087-.744.084-.729.084-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.835 2.809 1.305 3.493.998.108-.776.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.801 24 17.323 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/nurilhijas/" target="_blank" aria-label="Instagram" class="text-white hover:text-gray-300 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                    </a>
                 </div>
+            </div>
+            <!-- Image content (right) -->
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+                <!-- Using w-full and h-auto with max-width to scale responsively while maintaining aspect ratio -->
+                <img src="back_img_2.png" alt="Developer Digital Art" class="w-full max-w-[335px] h-auto object-contain shadow-lg rounded-full">
             </div>
         </div>
     </section>
 
-    <!-- Animate.css library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
     <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="text-center">
-                            <b><u>Overview</u></b>
-                        </h2>
-                    <p>
-                        I'm an IT professional with a Bachelor's degree, driven by a passion for crafting innovative software solutions. With expertise in Java, Spring Boot, gRPC, and Angular, I've excelled in creating efficient, user-centric applications. I thrive on solving
-                        complex challenges and have a track record of contributing to the success of various projects throughout my tech career.
+    <section id="about" class="py-16 sm:py-20 bg-white rounded-2xl shadow-lg mx-4 sm:mx-8 lg:mx-16 my-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 relative pb-4">
+                About Me
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500 rounded-full"></span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="about_me.png" alt="About Me" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                      Hello! I'm Nuril, a passionate and results-driven Senior Software Developer who thrives on building robust, scalable backend systems that power modern digital experiences. My journey in software development began over four years ago, sparked by a deep interest in how complex systems work behind the scenes and a desire to solve real-world problems through technology.
                     </p>
-                    <br />
-                    <h2 class="text-center">
-                            <b><u>Skills</u></b>
-                        </h2>
-                    <div class="container mt-5">
-                        <div class="row" id="skillsList">
-                            <!-- Skill boxes will be dynamically added here using JavaScript -->
-                        </div>
-                    </div>
+                    <p class="mb-4">
+                      I specialize in backend development, with a strong focus on crafting efficient, secure, and high-performance services that integrate seamlessly within microservice and event-driven architectures. I enjoy working on challenging problems and optimizing systems to meet both user and business needs.
+                    </p>
+                    <p>
+                      When I’m not coding, I enjoy exploring emerging backend technologies, refining my problem-solving skills, and occasionally contributing to internal tools and frameworks. I believe in writing clean, maintainable code and collaborating closely with teams to drive impactful outcomes.
+                    </p>
                 </div>
-                <!-- Add more columns for additional content -->
             </div>
         </div>
     </section>
 
-    <section id="work" class="py-5" style="background-color: #ffffff;">
-        <h2 class="text-center">
-                <b><u>Work Experience</u></b>
+    <section id="experience" class="py-16 sm:py-20 bg-gray-100 rounded-2xl shadow-lg mx-4 sm:mx-8 lg:mx-16 my-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 relative pb-4">
+                Experience
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500 rounded-full"></span>
             </h2>
-        <ul class="timeline">
-            <p style="text-align: center;"><b>Present</b></p>
-            <!-- Item 1-->
-            <li>
-                <div class="direction-l">
-                    <div class="flag-wrapper">
-                        <span class="hexa"></span>
-                        <span class="flag">Software Engineer</span>
-                        <span class="time-wrapper"><span class="time">October 2021 to Present</span></span>
-                        <span class="time-wrapper">
-                                <br />
-                                <span class="flag" style="color: #333;">VIT Infotech</span>
-                        </span>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <!-- Experience Item 1 -->
+                <div class="flex items-start bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                        4
                     </div>
-                    <div class="desc">
-                        <ul>
-                            <li>Developed and improved web pages using Angular, HTML, CSS, and Typescript to create dynamic and interactive user interfaces.</li>
-                            <li>Played a vital role in the implementation of workflow automation using the Activiti BPMN framework.</li>
-                            <li>Implemented and configured Kafka Producers and Consumers for this application, enabling efficient real-time data streaming and processing.</li>
-                            <li>Implemented and maintained Jenkins pipelines to automate the build, test, and deployment processes for the web application.</li>
-                            <li>Involved in Docker containerization to enhance application deployment and management.</li>
-                            <li>Implemented a new plugin to address a critical vulnerability issue, ensuring the security of this application.</li>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Senior Associate, Engineering - Technology</h3>
+                        <p class="text-blue-600 font-medium mb-2">Vivriti Capital Private Limited. | Apr 2025 – Present</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Developed an Apache Airflow pipeline to automate and manage bulk file transfers.</li>
+                            <li>(RBAC)Role-based Access Control implemented to protect user-to-user and machine-to-machine interactions from users using fine-tuned access control and enhanced application security.</li>
+                            <li>Completed a proof of concept for the No-Code platform, demonstrated the viability of the manufacture of configurable workflows without coding to increase development and empower non-technical users.</li>
                         </ul>
                     </div>
                 </div>
-            </li>
 
-            <!-- Item 3 -->
-            <li>
-                <div class="direction-r">
-                    <div class="flag-wrapper">
-                        <span class="hexa"></span>
-                        <span class="flag">Software Enfineer Trainee</span>
-                        <span class="time-wrapper"><span class="time">October 2020 to October 2021</span></span>
-                        <span class="time-wrapper">
-                                <br />
-                                <span class="flag" style="color: #333;">VIT Infotech</span>
-                        </span>
+                <!-- Experience Item 2 -->
+                <div class="flex items-start bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                    <div class="flex-shrink-0 w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                        3
                     </div>
-                    <div class="desc">
-                        <ul>
-                            <li>Designed and developed Restful APIs for different modules in the project as per the requirement.</li>
-                            <li>Integrated email operations and PDF report generation using RESTful APIs for this application, enhancing communication and reporting capabilities.</li>
-                            <li>Implemented the Liquibase framework for efficient database version control and schema migration.</li>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Software Engineer</h3>
+                        <p class="text-green-600 font-medium mb-2">Vivriti Capital Private Limited. | Feb 2024 – Mar 2025</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Led the development team, overseeing weekly QA releases, maintaining code quality, and streamlining the CI/CD pipeline for faster and more reliable deployments.</li>
+                            <li>Designed and implemented over 220 RESTful APIs, all of which are successfully deployed in production, ensuring high availability and responsiveness.</li>
+                            <li>Integrated Consul for dynamic service discovery and IBM API Connect for secure external API communication, enabling seamless microservice interactions and ensuring compliance with security standards</li>
+                            <li>Developed and deployed a custom JAR to simplify and standardize microservice communication, reducing the complexity of integration.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div class="flex items-start bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                    <div class="flex-shrink-0 w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Software Engineer</h3>
+                        <p class="text-purple-600 font-medium mb-2">Vyshnavi Information Technologies Private Limited | Oct 2021 – Feb 2024</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
                             <li>Implemented batch processing logic to handle large volumes of records, ensuring data integrity and minimizing processing time.</li>
+                            <li>Implemented Kafka producers and consumers for efficient real-time data streaming and processing.</li>
+                            <li>Developed and improved web pages using Angular, HTML, CSS, and Typescript to create dynamic and interactive user interfaces.</li>
                         </ul>
                     </div>
                 </div>
-            </li>
-            <p style="text-align: center;"><b>19-October-2020</b></p>
-        </ul>
-    </section>
-    <section id="project" class="py-5">
-        <h2 class="text-center">
-                <b><u>Projects</u></b>
-            </h2>
-        <div class="project-container row">
-            <!-- Project 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card project-card">
-                    <img src="student-management-logo.png" class="card-img-top project-thumbnail" alt="Project 1 Thumbnail" />
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Student Management</b></h5>
-                        <p class="card-text" style="text-align: justify;">
-                            I spearheaded the development of a dynamic and efficient student management system designed to streamline and enhance the administrative processes within educational institutions. The project aims to revolutionize the way schools manage student data,
-                            fees, transfer, billings and reports
-                        </p>
-                        <br />
-                        <br />
-                        <a href="#" class="btn btn-primary">View Project <i class="fa fa-lock"></i></a>
+                                <!-- Experience Item 4 -->
+                <div class="flex items-start bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                    <div class="flex-shrink-0 w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                        1
                     </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card project-card">
-                    <img src="shutdown-logo.png" class="card-img-top project-thumbnail" alt="Project 2 Thumbnail" />
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Project Shutdown</b></h5>
-                        <p class="card-text" style="text-align: justify;">
-                            Project Shutdown is a robust Android application developed to facilitate the remote shutdown of devices within a network using IP addresses. Leveraging socket programming, this project offers a seamless and secure solution for users to control device
-                            power remotely, providing practical utility in scenarios where manual shutdown is inconvenient or inaccessible.
-                        </p>
-                        <br />
-                        <a href="https://github.com/Nurilhijas/Project-Shutdown" target="_blank" class="btn btn-primary">View Project <i class="fa fa-unlock"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card project-card">
-                    <img src="Dashboard-logo.jpg" class="card-img-top project-thumbnail img-fluid" alt="Project 3 Thumbnail" />
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Collaborative Problem-Solving Dashboard</b></h5>
-                        <p class="card-text" style="text-align: justify;">
-                            Our project centers around the creation of an interactive dashboard for students, staff, and industry professionals within a college setting. This platform serves as a solution hub, allowing users to engage in discussions across various fields, seeking
-                            and providing solutions to challenges they encounter. The dashboard acts as a bridge, fostering collaboration and knowledge exchange.
-                        </p>
-
-                        <a href="#" class="btn btn-primary">View Project <i class="fa fa-lock"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card project-card">
-                    <img src="tax-logo.png" class="card-img-top project-thumbnail img-fluid" alt="Project 4 Thumbnail" />
-                    <div class="card-body">
-                        <h5 class="card-title"><b>G.S.T Tax Calculator</b></h5>
-                        <p class="card-text" style="text-align: justify;">
-                            The GST Tax Calculator Android application simplifies and expedites the process of calculating Goods and Services Tax (GST) for users. With a user-friendly interface and efficient functionalities, this app provides a quick solution for individuals and
-                            businesses to determine GST amounts accurately.
-                        </p>
-                        <a href="https://github.com/Nurilhijas/G.S.T-Tax-Calculator" target="_blank" class="btn btn-primary">View Project <i class="fa fa-unlock"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card project-card">
-                    <img src="Fututre-logo.jpg" class="card-img-top project-thumbnail img-fluid" alt="Project 5 Thumbnail" />
-                    <div class="card-body">
-                        <h5 class="card-title"><b>New Project.....</b></h5>
-                        <p class="card-text">In future....</p>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <a href="#" class="btn btn-primary">View Project <i class="fa fa-unlock"></i></a>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Software Engineer Trainee</h3>
+                        <p class="text-orange-600 font-medium mb-2">Vyshnavi Information Technologies Private Limited. | Oct 2020 - Sept 2021</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Designed and developed RESTful APIs for various modules, including email operations and PDF report generation, improving communication and reporting capabilities.</li>
+                            <li>Improved database performance by optimizing MySQL queries, increasing response times by 11%.</li>
+                            <li>Implemented the Liquibase framework for efficient database version control and schema migration.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-5">
-        <div class="container">
-            <div class="contact-container">
-                <h2 class="text-center">
-                        <b><u>Contact Me</u></b>
-                    </h2>
-                <p class="text-center">Feel free to reach out to me using the form below.</p>
-
-                <!-- Contact Form -->
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="b7f311f6-d56b-4468-98c9-2d3ff6edc53e">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" class="form-control" id="name" name="name" required />
+    <!-- Skills Section (Existing) -->
+    <section id="skills" class="py-16 sm:py-20 bg-white rounded-2xl shadow-lg mx-4 sm:mx-8 lg:mx-16 my-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 relative pb-4">
+                My Skills
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-blue-500 mr-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                        <h3 class="text-2xl font-semibold text-gray-800">Front-End Development</h3>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required />
+                    <p class="text-gray-600 mb-4">Proficient in building responsive and interactive user interfaces.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
                     </div>
+                    <span class="text-sm text-gray-500 mt-2 block text-right">HTML, CSS, JavaScript, Angular</span>
+                </div>
 
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                <!-- Skill Card 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-green-500 mr-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 7h2v6h-2zm0 8h2v2h-2z"/></svg>
+                        <h3 class="text-2xl font-semibold text-gray-800">Back-End Development</h3>
                     </div>
+                    <p class="text-gray-600 mb-4">Experience with server-side logic and database management.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-green-600 h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                    <span class="text-sm text-gray-500 mt-2 block text-right">Java, Python, C#</span>
+                </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                <!-- Skill Card 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-purple-500 mr-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                        <h3 class="text-2xl font-semibold text-gray-800">Database Management</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Designing and managing efficient databases for applications.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-purple-600 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                    <span class="text-sm text-gray-500 mt-2 block text-right">SQL, PostgreSQL, MySQL, MongoDB, Couchbase</span>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-red-500 mr-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                        <h3 class="text-2xl font-semibold text-gray-800">Cloud Platforms</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Deployment and management of applications on cloud services.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-red-600 h-2.5 rounded-full" style="width: 60%"></div>
+                    </div>
+                    <span class="text-sm text-gray-500 mt-2 block text-right">AWS, Google Cloud Platform</span>
+                </div>
+
+                <!-- Skill Card 5 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-10 h-10 text-yellow-500 mr-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                        <h3 class="text-2xl font-semibold text-gray-800">Version Control</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Proficient in using Git for collaborative development and code management.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                    <span class="text-sm text-gray-500 mt-2 block text-right">Git, GitHub, Bitbucket</span>
+                </div>
+
+                <!-- Skill Card 6 -->
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <div class="flex items-center mb-4">
+                        <!-- Generic SVG icon for now, you can replace with a more specific one if needed -->
+                        <svg class="w-10 h-10 text-indigo-500 mr-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 15.93l-6-3V8.07l6-3 6 3v6.86l-6 3z"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-gray-800">Architectures</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Experienced in designing and implementing various software architectures.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 90%"></div>
+                    </div>
+                    <span class="text-sm text-gray-500 mt-2 block text-right">Microservices, Monolithic, Data Driven, Event-Driven</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack / Other Skills Section (New) -->
+    <section id="tech-stack" class="py-16 sm:py-20 bg-gray-100 rounded-2xl shadow-lg mx-4 sm:mx-8 lg:mx-16 my-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 relative pb-4">
+                My Tech Stack
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500 rounded-full"></span>
+            </h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Java</span>
+                <span class="bg-green-200 text-green-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Python</span>
+                <span class="bg-pink-200 text-pink-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">C#</span>
+                <span class="bg-purple-200 text-purple-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Angular</span>
+                <span class="bg-red-200 text-red-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">JavaScript</span>
+                <span class="bg-yellow-200 text-yellow-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Spring Boot</span>
+                <span class="bg-teal-200 text-teal-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Apache Airflow</span>
+                <span class="bg-indigo-200 text-indigo-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Kafka</span>
+                <span class="bg-pink-200 text-pink-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Circuit Breaker</span>
+                <span class="bg-orange-200 text-orange-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">gRPC</span>
+                <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Consul</span>
+                <span class="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Liquibase</span>
+                <span class="bg-green-200 text-green-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Mokito</span>
+                <span class="bg-purple-200 text-purple-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">MySQL</span>
+                <span class="bg-yellow-200 text-yellow-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">PostgreSQL</span>
+                <span class="bg-pink-200 text-pink-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">MongoDB</span>
+                <span class="bg-orange-200 text-orange-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Couchbase</span>
+                <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Microservices</span>
+                <span class="bg-purple-200 text-purple-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Event-Driven</span>
+                <span class="bg-indigo-200 text-indigo-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Data-Driven</span>
+                <span class="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Docker</span>
+                <span class="bg-teal-200 text-teal-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">JIRA</span>
+                <span class="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">BitBucket</span>
+                <span class="bg-green-200 text-green-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Confluence</span>
+                <span class="bg-red-200 text-red-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">SonarQube</span>
+                <span class="bg-gray-300 text-gray-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">Kibana</span>
+                <span class="bg-yellow-200 text-yellow-800 px-4 py-2 rounded-full font-semibold text-lg shadow-sm">JMeter</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 sm:py-20 bg-white rounded-2xl shadow-lg mx-4 sm:mx-8 lg:mx-16 my-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 relative pb-4">
+                My Projects
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="student-management-logo.png" alt="Student Management" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Student Management</h3>
+                        <p class="text-gray-600 mb-4">I spearheaded the development of a dynamic and efficient student management system designed to streamline and enhance the administrative processes within educational institutions. The project aims to revolutionize the way schools manage student data, fees, transfer, billings and reports.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="shutdown-logo.png" alt="Project ShutDown" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Project Shutdown</h3>
+                        <p class="text-gray-600 mb-4">Project Shutdown is a robust Android application developed to facilitate the remote shutdown of devices within a network using IP addresses. Leveraging socket programming, this project offers a seamless and secure solution for users to control device power remotely, providing practical utility in scenarios where manual shutdown is inconvenient or inaccessible.</p>
+                        <a href="https://github.com/Nurilhijas/Project-Shutdown" class="text-blue-600 hover:underline font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="Dashboard-logo.jpg" alt="Dashboard Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Collaborative Problem-Solving Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Our project centers around the creation of an interactive dashboard for students, staff, and industry professionals within a college setting. This platform serves as a solution hub, allowing users to engage in discussions across various fields, seeking and providing solutions to challenges they encounter. The dashboard acts as a bridge, fostering collaboration and knowledge exchange.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="tax-logo.png" alt="Tax Calculator" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">G.S.T Tax Calculator</h3>
+                        <p class="text-gray-600 mb-4">The GST Tax Calculator Android application simplifies and expedites the process of calculating Goods and Services Tax (GST) for users. With a user-friendly interface and efficient functionalities, this app provides a quick solution for individuals and businesses to determine GST amounts accurately.</p>
+                        <a href="https://github.com/Nurilhijas/G.S.T-Tax-Calculator" class="text-blue-600 hover:underline font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="Fututre-logo.jpg" alt="Project 5" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">New Project.....</h3>
+                        <p class="text-gray-600 mb-4">In future....</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-20 bg-gray-100 rounded-2xl shadow-lg mx-4 sm:mx-8 lg:mx-16 my-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12 relative pb-4">
+                Get In Touch
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-500 rounded-full"></span>
+            </h2>
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-200" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-200" placeholder="your.email@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-200" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transform hover:scale-105 transition duration-300 ease-in-out">
+                        Send Message
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- Animate.css library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
-
-    <!-- Custom JavaScript to dynamically create skill boxes with animation -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-                var container = document.getElementById("skillsList");
-
-                // Updated data for each skill (name, logo URL)
-                var skillsData = [
-                    { name: "Java", logo: "java-logo.png", rating: 5 },
-                    { name: "Spring Boot", logo: "spring-boot-logo.png", rating: 5 },
-                    { name: "GRPC", logo: "grpc-logo.png", rating: 5 },
-                    { name: "Microservices", logo: "microservice-logo.jpg", rating: 4 },
-                    { name: "Event-Driven", logo: "event-driven-architecture-logo.jpg", rating: 4 },
-                    { name: "Kafka", logo: "kafka-logo.png", rating: 5 },
-                    { name: "Angular", logo: "angular-logo.png", rating: 4 },
-                    { name: "MySQL", logo: "mysql-logo.png", rating: 5 },
-                    { name: "PostgreSQL", logo: "postgresql-logo.png", rating: 5 },
-                    { name: "Couchbase", logo: "couchbase-logo.png", rating: 5 },
-                    { name: "HTML", logo: "html-logo.png", rating: 5 },
-                    { name: "CSS", logo: "css-logo.png", rating: 5 },
-                    { name: "JavaScript", logo: "java-script-logo.png", rating: 4 },
-                    { name: "C#",   logo: "c-sharp-logo.png", rating: 4},
-                    { name: "Liquibase", logo: "Liquibase-logo.png", rating: 4 },
-                    { name: "Jenkins", logo: "jenkins-logo.png", rating: 5 },
-                    { name: "Docker", logo: "docker-logo.png", rating: 4 },
-                    { name: "Jira", logo: "jira-logo.png", rating: 5 },
-                    { name: "BitBucket", logo: "bitbucket-logo.png", rating: 5 },
-                    { name: "Kibana", logo: "kibana-logo.png", rating: 4 },
-                    { name: "SonarQube", logo: "sonarqube-logo.png", rating: 5 },
-                    { name: "JMeter", logo: "jmeter-logo.png", rating: 3 },
-                ];
-
-                function createSkillBox(name, logo, rating) {
-                    var box = document.createElement("div");
-                    box.className = "col-md-2 mb-3 animate__animated animate__bounceIn";
-                    box.innerHTML = `
-                <div class="skill-box">
-                    <img class="box-logo" src="${logo}" alt="${name}">
-                    <div class="box-name">
-                    <p class="">${name}</p>
-                    <p class="stars">
-                        ${Array.from({ length: rating }, (_, index) => `<i class="fa fa-star"></i>`).join("")}
-                    </p>
-                    </div>
-                </div>`;
-                    container.appendChild(box);
-                }
-
-                // Create skill boxes with animation
-                skillsData.forEach((skill, index) => {
-                    setTimeout(() => {
-                        createSkillBox(skill.name, skill.logo, skill.rating);
-                    }, index * 100); // Delay each box by 200 milliseconds
-                });
-            });
-    </script>
-    <footer>
-        <b> &copy; 2024 Nuril Hijas Safiullah. All Rights Reserved.</b>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 rounded-t-lg shadow-inner">
+        <div class="container mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <p class="mb-4">&copy; 2025 Nuril Hijas S. All rights reserved.</p>
+        </div>
     </footer>
-    <div id="background-wrap">
-        <div class="bubble x1"></div>
-        <div class="bubble x2"></div>
-        <div class="bubble x3"></div>
-        <div class="bubble x4"></div>
-        <div class="bubble x5"></div>
-        <div class="bubble x6"></div>
-        <div class="bubble x7"></div>
-        <div class="bubble x8"></div>
-        <div class="bubble x9"></div>
-        <div class="bubble x10"></div>
-    </div>
-</body>
 
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Toggle mobile menu visibility
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
 </html>
